@@ -1,0 +1,4 @@
+FROM openjdk:11
+EXPOSE 8082
+ADD target/docker-SpringDemo.jar docker-SpringDemo.jar
+ENTRYPOINT ["java","-jar","/docker-SpringDemo.jar"]
