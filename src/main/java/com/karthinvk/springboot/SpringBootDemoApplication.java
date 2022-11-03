@@ -14,7 +14,7 @@ import com.karthinvk.springboot.service.EmployeeService;
 @RestController
 public class SpringBootDemoApplication {
 	
-	String str = "</html>\n<body bgcolor=\"blue\">\n<h1><marquee>Hello kavipriyan</marquee></h1>\n<h1><marquee>Hello Harinika</marquee></h1>\n</body>\n</html>";
+	String str = "</html>\n<body bgcolor=\"blue\">\n<h1><marquee>Hello Kavipriyan</marquee></h1>\n<h1><marquee>Hello Harinika</marquee></h1>\n</body>\n</html>";
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootDemoApplication.class, args);
@@ -29,7 +29,6 @@ public class SpringBootDemoApplication {
 	}
 	
 	@GetMapping("/color")
-	@ResponseBody
 	public String colorChange(@RequestParam(value = "colorname", defaultValue = "green") String name) {
 		str = str.replace("blue", name);
 	return str;
